@@ -108,7 +108,7 @@ namespace GroupUI
             {
                 string mainConn = ConfigurationManager.ConnectionStrings["Lab17db"].ConnectionString;
                 sqlconn = new SqlConnection(mainConn);
-                string sqlquery = String.Format("INSERT INTO [User] ([FirstName], [Email], [Password]) VALUES ('{0}', '{1}', '{2}')", txtName.Text, txtEmail.Text, txtPassword.Text);
+                string sqlquery = String.Format("INSERT INTO [Users] ([Username], [Password]) VALUES ('{0}', '{1}')", txtUsername.Text, txtPassword.Text);
                 SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
                 sqlconn.Open();
                 sqlcomm.ExecuteNonQuery();
