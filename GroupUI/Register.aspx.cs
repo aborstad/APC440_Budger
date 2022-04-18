@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace GroupUI
 {
@@ -21,6 +23,7 @@ namespace GroupUI
             string confirm = txtConfirmPassword.Text;
             string username = txtUsername.Text;
             int passwordLength = password.Length;
+            SqlConnection sqlconn = null;
 
             // Username input validation
             if (username == string.Empty)
@@ -100,6 +103,26 @@ namespace GroupUI
             }
 
             Response.Redirect("LogIn.aspx");
+
+            try
+            {
+                string mainConn = ConfigurationManager.ConnectionStrings["Lab17db"].ConnectionString;
+                sqlconn = new SqlConnection(mainConn);
+                string sqlquery = String.Format("INSERT INTO [User] ([FirstName], [Email], [Password]) VALUES ('{0}', '{1}', '{2}')", txtName.Text, txtEmail.Text, txtPassword.Text);
+                SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
+                sqlconn.Open();
+                sqlcomm.ExecuteNonQuery();
+
+                Response.Redirect("Success.aspx");
+            }
+            catch (Exception ex)
+            {
+                lblQuery.Text = "Error: " + ex.Message;
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
         }
     }
 }

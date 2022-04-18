@@ -162,7 +162,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style1">&nbsp;</td>
-                    <td class="auto-style1">&nbsp;</td>
+                    <td class="auto-style1">
+                        <asp:Label ID="lblQuery" runat="server"></asp:Label>
+                    </td>
                     <td class="auto-style1">&nbsp;</td>
                 </tr>
             </table>
