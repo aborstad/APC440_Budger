@@ -102,18 +102,16 @@ namespace GroupUI
                 lblConfirmPasswordError.Text = string.Empty;
             }
 
-            Response.Redirect("LogIn.aspx");
-
             try
             {
-                string mainConn = ConfigurationManager.ConnectionStrings["Lab17db"].ConnectionString;
+                string mainConn = ConfigurationManager.ConnectionStrings["CalendarDB"].ConnectionString;
                 sqlconn = new SqlConnection(mainConn);
                 string sqlquery = String.Format("INSERT INTO [Users] ([Username], [Password]) VALUES ('{0}', '{1}')", txtUsername.Text, txtPassword.Text);
                 SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
                 sqlconn.Open();
                 sqlcomm.ExecuteNonQuery();
 
-                Response.Redirect("Success.aspx");
+                Response.Redirect("LogIn.aspx");
             }
             catch (Exception ex)
             {
