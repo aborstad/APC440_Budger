@@ -71,6 +71,7 @@
     <Content Include="App_Data\CalendarDB_log.ldf">
       <DependentUpon>CalendarDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Clipboard.png" />
     <Content Include="CreateTask.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LogIn.aspx" />
