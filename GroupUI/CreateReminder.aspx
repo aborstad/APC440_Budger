@@ -28,7 +28,7 @@
         }
         .auto-style6 {
             width: 384px;
-            text-align: center;
+            text-align: left;
         }
         .auto-style7 {
             width: 149px;
@@ -52,6 +52,17 @@
         .auto-style12 {
             height: 25px;
         }
+        .auto-style13 {
+            width: 149px;
+            height: 52px;
+        }
+        .auto-style14 {
+            width: 384px;
+            height: 52px;
+        }
+        .auto-style15 {
+            height: 52px;
+        }
     </style>
 </head>
 <body>
@@ -67,29 +78,42 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style13">
+                    <asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label>
+                </td>
+                <td class="auto-style14">
+                    <asp:TextBox ID="txtName" runat="server" Width="362px"></asp:TextBox>
+                </td>
+                <td class="auto-style15">
+                    <asp:Label ID="lblErrorName" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
                 <td class="auto-style1">Description:</td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="txtDescription" runat="server" Height="97px" OnTextChanged="TextBox1_TextChanged" Width="365px"></asp:TextBox>
+                    <asp:TextBox ID="txtDescription" runat="server" Height="97px" OnTextChanged="TextBox1_TextChanged" Width="365px" TextMode="MultiLine"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="lblErrorDescription" runat="server"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Select Date:</td>
                 <td class="auto-style6">
-                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                    <asp:TextBox ID="txtDate" runat="server" TextMode="Date" Width="241px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="lblErrorDate" runat="server"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style10">Select Time:</td>
                 <td class="auto-style11">
-                    <asp:TextBox ID="txtTime" runat="server"></asp:TextBox>
-                    <asp:DropDownList ID="DropDownList1" runat="server">
-                        <asp:ListItem>AM</asp:ListItem>
-                        <asp:ListItem>PM</asp:ListItem>
-                    </asp:DropDownList>
+                    <asp:TextBox ID="txtTime" runat="server" TextMode="Time" Width="242px"></asp:TextBox>
                 </td>
-                <td class="auto-style12">&nbsp;</td>
+                <td class="auto-style12">
+                    <asp:Label ID="lblErrorTime" runat="server"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style7"></td>
