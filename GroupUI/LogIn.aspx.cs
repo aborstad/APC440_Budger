@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace GroupUI
 {
@@ -20,6 +23,8 @@ namespace GroupUI
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             int passwordLength = password.Length;
+            SqlConnection sqlconn = null;
+            SqlCommand cmd;
 
             // Username input validation
             if (username == string.Empty)
@@ -66,7 +71,37 @@ namespace GroupUI
                 lblPasswordError.Text = string.Empty;
             }
 
-            Response.Redirect("Home.aspx");
+            try
+            {
+                string mainConn = ConfigurationManager.ConnectionStrings["CalendarDB"].ConnectionString;
+                sqlconn = new SqlConnection(mainConn);
+                string sqlquery = ("SELECT COUNT(1) FROM Users WHERE (Username='" + txtUsername.Text +
+                    "') AND (Password='" + txtPassword.Text + "')");
+                cmd = new SqlCommand(sqlquery, sqlconn);
+                sqlconn.Open();
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+                int value = Convert.ToInt32(cmd.ExecuteScalar());
+                if (value == 1)
+                {
+                    Response.Redirect("Home.aspx");
+                    cmd.Dispose();
+                }
+                else
+                {
+                    lblPasswordError.Text = "Incorrect Username/Password";
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                lblQuery.Text = "Error: " + ex.Message;
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+            
         }
     }
 }
