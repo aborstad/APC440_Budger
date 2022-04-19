@@ -6,80 +6,27 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style6 {
-            height: 81px;
-        }
-        .auto-style7 {
-            height: 81px;
-            text-align: center;
-            width: 295px;
-        }
         .auto-style8 {
-            height: 71px;
+            height: 183px;
             text-align: center;
             width: 295px;
         }
         .auto-style9 {
-            height: 71px;
-        }
-        .auto-style15 {
-            height: 81px;
-            width: 401px;
-        }
-        .auto-style16 {
-            height: 71px;
-            width: 401px;
-        }
-        .auto-style21 {
-            height: 81px;
-            width: 80px;
+            height: 183px;
         }
         .auto-style22 {
-            height: 71px;
-            width: 80px;
-        }
-        .auto-style29 {
-            height: 70px;
-            width: 295px;
-        }
-        .auto-style30 {
-            height: 70px;
-            width: 401px;
-        }
-        .auto-style31 {
-            height: 70px;
-            width: 80px;
-        }
-        .auto-style32 {
-            height: 70px;
-        }
-        .auto-style33 {
-            height: 109px;
-            width: 401px;
-        }
-        .auto-style34 {
-            height: 109px;
-            width: 80px;
-        }
-        .auto-style35 {
-            height: 109px;
-            width: 295px;
-        }
-        .auto-style36 {
-            height: 109px;
+            height: 183px;
+            width: 181px;
+            text-align: center;
         }
         .auto-style37 {
             height: 60px;
             text-align: center;
             width: 295px;
         }
-        .auto-style38 {
-            height: 60px;
-            width: 401px;
-        }
         .auto-style39 {
             height: 60px;
-            width: 80px;
+            width: 181px;
         }
         .auto-style40 {
             height: 60px;
@@ -88,13 +35,9 @@
             width: 100%;
             margin-bottom: 0px;
         }
-        .auto-style42 {
-            height: 50px;
-            width: 401px;
-        }
         .auto-style43 {
             height: 50px;
-            width: 80px;
+            width: 181px;
         }
         .auto-style44 {
             height: 50px;
@@ -107,12 +50,8 @@
         .auto-style46 {
             font-size: xx-large;
         }
-        .auto-style47 {
-            height: 81px;
-            width: 199px;
-        }
         .auto-style48 {
-            height: 71px;
+            height: 183px;
             width: 199px;
         }
         .auto-style51 {
@@ -123,18 +62,74 @@
             height: 50px;
             width: 199px;
         }
-        .auto-style53 {
-            height: 70px;
-            width: 199px;
-        }
-        .auto-style54 {
-            height: 109px;
-            width: 199px;
-        }
         .auto-style55 {
-            height: 70px;
+            height: 54px;
             width: 199px;
             text-align: left;
+        }
+        .auto-style61 {
+            height: 88px;
+            width: 181px;
+            text-align: center;
+        }
+        .auto-style62 {
+            height: 88px;
+            width: 295px;
+        }
+        .auto-style63 {
+            height: 88px;
+            width: 199px;
+        }
+        .auto-style64 {
+            height: 88px;
+        }
+        .auto-style69 {
+            height: 54px;
+            width: 181px;
+            text-align: center;
+        }
+        .auto-style70 {
+            height: 54px;
+            width: 295px;
+        }
+        .auto-style71 {
+            height: 54px;
+        }
+        .auto-style74 {
+            height: 54px;
+            width: 199px;
+        }
+        .auto-style75 {
+            height: 51px;
+            width: 181px;
+            text-align: center;
+        }
+        .auto-style76 {
+            height: 51px;
+            width: 295px;
+        }
+        .auto-style77 {
+            height: 51px;
+            width: 199px;
+        }
+        .auto-style78 {
+            height: 51px;
+        }
+        .auto-style79 {
+            height: 58px;
+            width: 181px;
+        }
+        .auto-style80 {
+            height: 58px;
+            text-align: center;
+            width: 295px;
+        }
+        .auto-style81 {
+            height: 58px;
+            width: 199px;
+        }
+        .auto-style82 {
+            height: 58px;
         }
     </style>
 </head>
@@ -142,17 +137,9 @@
     <form id="form1" runat="server">
         <table class="auto-style41">
             <tr>
-                <td class="auto-style15"></td>
-                <td class="auto-style21"></td>
-                <td class="auto-style7">
-                    <asp:Label ID="lblTitle" runat="server" CssClass="auto-style46" Text="Time Budger"></asp:Label>
+                <td class="auto-style22">
+                    <asp:Image ID="Image1" runat="server" Height="104px" ImageUrl="~/Clipboard.png" Width="132px" />
                 </td>
-                <td class="auto-style47"></td>
-                <td class="auto-style6"></td>
-            </tr>
-            <tr>
-                <td class="auto-style16"></td>
-                <td class="auto-style22"></td>
                 <td class="auto-style8">
                     <asp:Label ID="lblEvent" runat="server" CssClass="auto-style46" Text="Add Task"></asp:Label>
                 </td>
@@ -160,81 +147,78 @@
                 <td class="auto-style9"></td>
             </tr>
             <tr>
-                <td class="auto-style30"></td>
-                <td class="auto-style31">
-                    <asp:Label ID="lblDate" runat="server" Text="Date: "></asp:Label>
+                <td class="auto-style69">
+                    <asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label>
                 </td>
-                <td class="auto-style29">
-                    <asp:TextBox ID="txtDate" runat="server" Width="249px"></asp:TextBox>
+                <td class="auto-style70">
+                    <asp:TextBox ID="txtName" runat="server" Width="249px"></asp:TextBox>
                 </td>
                 <td class="auto-style55">
+                    <asp:Label ID="lblErrorName" runat="server"></asp:Label>
+                </td>
+                <td class="auto-style71"></td>
+            </tr>
+            <tr>
+                <td class="auto-style61">
+                    <asp:Label ID="lblDescription" runat="server" Text="Description"></asp:Label>
+                </td>
+                <td class="auto-style62">
+                    <asp:TextBox ID="txtDescription" runat="server" Width="246px" Height="63px" TextMode="MultiLine"></asp:TextBox>
+                </td>
+                <td class="auto-style63">
+                    <asp:Label ID="lblErrorDescription" runat="server"></asp:Label>
+                </td>
+                <td class="auto-style64"></td>
+            </tr>
+            <tr>
+                <td class="auto-style69">
+                    <asp:Label ID="lblDate" runat="server" Text="Date:"></asp:Label>
+                </td>
+                <td class="auto-style70">
+                    <asp:TextBox ID="txtDate" runat="server" Width="246px" TextMode="Date"></asp:TextBox>
+                </td>
+                <td class="auto-style74">
                     <asp:Label ID="lblErrorDate" runat="server"></asp:Label>
                 </td>
-                <td class="auto-style32"></td>
+                <td class="auto-style71"></td>
             </tr>
             <tr>
-                <td class="auto-style30"></td>
-                <td class="auto-style31">
-                    <asp:Label ID="lblStart" runat="server" Text="Start Time:"></asp:Label>
+                <td class="auto-style75">
+                    <asp:Label ID="lblTime" runat="server" Text="Time:"></asp:Label>
                 </td>
-                <td class="auto-style29">
-                    <asp:TextBox ID="txtStartTime" runat="server" Width="246px"></asp:TextBox>
+                <td class="auto-style76">
+                    <asp:TextBox ID="txtTime" runat="server" Width="246px" Height="18px" TextMode="Time"></asp:TextBox>
                 </td>
-                <td class="auto-style53">
-                    <asp:Label ID="lblErrorStartTime" runat="server"></asp:Label>
+                <td class="auto-style77">
+                    <asp:Label ID="lblErrorTime" runat="server"></asp:Label>
                 </td>
-                <td class="auto-style32"></td>
+                <td class="auto-style78"></td>
             </tr>
             <tr>
-                <td class="auto-style30"></td>
-                <td class="auto-style31">
-                    <asp:Label ID="lblEnd" runat="server" Text="End Time:"></asp:Label>
+                <td class="auto-style79">
                 </td>
-                <td class="auto-style29">
-                    <asp:TextBox ID="txtEndTime" runat="server" Width="246px"></asp:TextBox>
+                <td class="auto-style80">
+                    <asp:Button ID="btnAdd" runat="server" OnClick="Button1_Click" Text="Add" />
+                &nbsp;&nbsp;
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
                 </td>
-                <td class="auto-style53">
-                    <asp:Label ID="lblErrorEndTime" runat="server"></asp:Label>
+                <td class="auto-style81">
+                    <asp:Label ID="lblErrorQuery" runat="server"></asp:Label>
                 </td>
-                <td class="auto-style32"></td>
+                <td class="auto-style82"></td>
             </tr>
             <tr>
-                <td class="auto-style33"></td>
-                <td class="auto-style34">
-                    <asp:Label ID="lblNotes" runat="server" Text="Notes:"></asp:Label>
-                </td>
-                <td class="auto-style35">
-                    <asp:TextBox ID="txtNotes" runat="server" Width="246px" Height="58px"></asp:TextBox>
-                </td>
-                <td class="auto-style54"></td>
-                <td class="auto-style36"></td>
-            </tr>
-            <tr>
-                <td class="auto-style30"></td>
-                <td class="auto-style31">
-                    <asp:Label ID="lblPeople" runat="server" Text="People"></asp:Label>
-                </td>
-                <td class="auto-style29">
-                    <asp:TextBox ID="txtPeople" runat="server" Width="246px"></asp:TextBox>
-                </td>
-                <td class="auto-style53"></td>
-                <td class="auto-style32"></td>
-            </tr>
-            <tr>
-                <td class="auto-style38"></td>
                 <td class="auto-style39"></td>
                 <td class="auto-style37">
-                    <asp:Button ID="btnAdd" runat="server" OnClick="Button1_Click" Text="Add" />
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Tasks]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style51"></td>
                 <td class="auto-style40"></td>
             </tr>
             <tr>
-                <td class="auto-style42"></td>
                 <td class="auto-style43"></td>
                 <td class="auto-style44">
-                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style52"></td>
                 <td class="auto-style45"></td>
             </tr>
