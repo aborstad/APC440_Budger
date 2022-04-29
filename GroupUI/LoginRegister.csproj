@@ -73,6 +73,7 @@
     </Content>
     <Content Include="Clipboard.png" />
     <Content Include="CreateTask.aspx" />
+    <Content Include="DailyView.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LogIn.aspx" />
     <Content Include="Register.aspx" />
@@ -87,6 +88,13 @@
     </Compile>
     <Compile Include="CreateTask.aspx.designer.cs">
       <DependentUpon>CreateTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DailyView.aspx.cs">
+      <DependentUpon>DailyView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DailyView.aspx.designer.cs">
+      <DependentUpon>DailyView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
