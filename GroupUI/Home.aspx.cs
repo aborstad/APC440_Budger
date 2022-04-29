@@ -19,7 +19,7 @@ namespace Time_Budger_Home_Screen
 
         protected void btnDailView_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("DailyView.aspx");
         }
 
         protected void btnTasks_Click(object sender, EventArgs e)
